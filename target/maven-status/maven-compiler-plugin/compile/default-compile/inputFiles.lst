@@ -10,6 +10,9 @@ C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\proje
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\controller\MainController.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\controller\StudentController.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\controller\TeacherController.java
+C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\controller\UserRestController.java
+C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\dto\CreateUserDTO.java
+C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\dto\UserDTO.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\model\Address.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\model\Course.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\model\Group.java

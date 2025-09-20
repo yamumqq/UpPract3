@@ -54,6 +54,9 @@ public class SecurityConfig {
             .authorizeHttpRequests(authz -> authz
                 // Публичные страницы
                 .requestMatchers("/", "/login", "/register", "/css/**", "/js/**", "/images/**").permitAll()
+                // Swagger UI и API документация
+                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-ui.html").permitAll()
+                .requestMatchers("/api/users/**").permitAll() // Временно разрешаем доступ к API
                 // Просмотр страниц доступен всем аутентифицированным пользователям
                 .requestMatchers("/students", "/groups", "/courses", "/teachers", "/addresses").authenticated()
                 .requestMatchers("/students/view/**", "/groups/view/**", "/courses/view/**", "/teachers/view/**", "/addresses/view/**").authenticated()
