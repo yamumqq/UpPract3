@@ -21,7 +21,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/courses")
-public class CourseController {
+public class CourseController extends BaseController {
     
     @Autowired
     private CourseService courseService;
@@ -79,6 +79,9 @@ public class CourseController {
         model.addAttribute("minPrice", minPrice);
         model.addAttribute("maxPrice", maxPrice);
         model.addAttribute("teacherId", teacherId);
+        
+        // Добавляем информацию о текущем пользователе
+        addUserInfoToModel(model);
         
         return "courses";
     }

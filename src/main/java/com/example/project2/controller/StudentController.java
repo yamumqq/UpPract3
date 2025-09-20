@@ -23,7 +23,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/students")
-public class StudentController {
+public class StudentController extends BaseController {
     
     @Autowired
     private StudentService studentService;
@@ -84,6 +84,9 @@ public class StudentController {
         model.addAttribute("courseYear", courseYear);
         model.addAttribute("startDate", startDate);
         model.addAttribute("endDate", endDate);
+        
+        // Добавляем информацию о текущем пользователе
+        addUserInfoToModel(model);
         
         return "students";
     }

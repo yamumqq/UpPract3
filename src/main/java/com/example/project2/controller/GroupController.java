@@ -19,7 +19,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/groups")
-public class GroupController {
+public class GroupController extends BaseController {
     
     @Autowired
     private GroupService groupService;
@@ -59,6 +59,9 @@ public class GroupController {
         model.addAttribute("sortDir", sortDir);
         model.addAttribute("search", search);
         model.addAttribute("courseYear", courseYear);
+        
+        // Добавляем информацию о текущем пользователе
+        addUserInfoToModel(model);
         
         return "groups";
     }

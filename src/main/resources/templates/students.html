@@ -36,6 +36,32 @@
                         <i class="fas fa-map-marker-alt me-1"></i>Адреса
                     </a>
                 </div>
+                <div class="nav-auth ms-3" th:if="${!isAuthenticated}">
+                    <a href="/login" class="btn btn-outline-primary me-2">
+                        <i class="fas fa-sign-in-alt me-1"></i>Войти
+                    </a>
+                    <a href="/register" class="btn btn-primary">
+                        <i class="fas fa-user-plus me-1"></i>Регистрация
+                    </a>
+                </div>
+                <div class="nav-auth ms-3" th:if="${isAuthenticated}">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown">
+                            <i class="fas fa-user me-1"></i>
+                            <span th:text="${currentUser.username}">Пользователь</span>
+                            <span class="badge bg-secondary ms-1" th:text="${currentUser.role.displayName}">Роль</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="/profile">
+                                <i class="fas fa-user-circle me-2"></i>Профиль
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/logout">
+                                <i class="fas fa-sign-out-alt me-2"></i>Выйти
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -57,7 +83,7 @@
                     </h1>
                     <p class="page-subtitle">Управление информацией о студентах и их прогрессом</p>
                 </div>
-                <div class="col-md-4 text-end">
+                <div class="col-md-4 text-end" th:if="${isAdmin}">
                     <a href="/students/new" class="btn btn-primary">
                         <i class="fas fa-plus me-2"></i>Добавить студента
                     </a>
@@ -208,14 +234,16 @@
                                         </a>
                                         <a th:href="@{/students/edit/{id}(id=${student.id})}" 
                                            class="btn btn-sm btn-outline-warning" 
-                                           title="Редактировать">
+                                           title="Редактировать"
+                                           th:if="${isAdmin}">
                                             <i class="fas fa-edit"></i>
                                         </a>
                                         <button type="button" 
                                                 class="btn btn-sm btn-outline-danger" 
                                                 title="Удалить"
                                                 data-bs-toggle="modal" 
-                                                th:data-bs-target="'#deleteModal' + ${student.id}">
+                                                th:data-bs-target="'#deleteModal' + ${student.id}"
+                                                th:if="${isAdmin}">
                                             <i class="fas fa-trash"></i>
                                         </button>
                                     </div>

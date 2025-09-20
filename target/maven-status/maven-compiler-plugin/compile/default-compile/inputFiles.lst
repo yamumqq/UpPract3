@@ -1,5 +1,10 @@
+C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\config\DataInitializer.java
+C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\config\H2Config.java
+C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\config\SecurityConfig.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\config\WebConfig.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\controller\AddressController.java
+C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\controller\AuthController.java
+C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\controller\BaseController.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\controller\CourseController.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\controller\GroupController.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\controller\MainController.java
@@ -8,14 +13,17 @@ C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\proje
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\model\Address.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\model\Course.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\model\Group.java
+C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\model\Role.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\model\Student.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\model\Teacher.java
+C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\model\User.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\Project2Application.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\repository\AddressRepository.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\repository\CourseRepository.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\repository\GroupRepository.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\repository\StudentRepository.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\repository\TeacherRepository.java
+C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\repository\UserRepository.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\service\AddressService.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\service\AddressServiceImpl.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\service\CourseService.java
@@ -26,3 +34,5 @@ C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\proje
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\service\StudentServiceImpl.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\service\TeacherService.java
 C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\service\TeacherServiceImpl.java
+C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\service\UserService.java
+C:\Users\admin\Downloads\crud-entities-db-master\src\main\java\com\example\project2\service\UserServiceImpl.java

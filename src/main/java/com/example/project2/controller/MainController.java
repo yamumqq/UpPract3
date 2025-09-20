@@ -11,7 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class MainController {
+public class MainController extends BaseController {
     
     @Autowired
     private StudentService studentService;
@@ -35,6 +35,10 @@ public class MainController {
         model.addAttribute("courseCount", courseService.count());
         model.addAttribute("addressCount", addressService.count());
         model.addAttribute("teacherCount", teacherService.count());
+        
+        // Добавляем информацию о текущем пользователе
+        addUserInfoToModel(model);
+        
         return "index";
     }
 }

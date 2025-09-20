@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - EduStream</title>
+    <link rel="stylesheet" href="/css/twitch-theme.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <i class="fas fa-broadcast-tower"></i>
+                <h1>EduStream</h1>
+                <p>Регистрация нового пользователя</p>
+            </div>
+            
+            <form th:action="@{/register}" th:object="${user}" method="post" class="auth-form">
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-user"></i>
+                        Имя пользователя *
+                    </label>
+                    <input type="text" id="username" th:field="*{username}" required 
+                           placeholder="Введите имя пользователя (3-50 символов)">
+                    <div th:if="${#fields.hasErrors('username')}" class="error-message">
+                        <span th:errors="*{username}"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i>
+                        Email *
+                    </label>
+                    <input type="email" id="email" th:field="*{email}" required 
+                           placeholder="Введите email">
+                    <div th:if="${#fields.hasErrors('email')}" class="error-message">
+                        <span th:errors="*{email}"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                        Пароль *
+                    </label>
+                    <input type="password" id="password" th:field="*{password}" required 
+                           placeholder="Введите пароль (минимум 8 символов)">
+                    <div th:if="${#fields.hasErrors('password')}" class="error-message">
+                        <span th:errors="*{password}"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">
+                        <i class="fas fa-lock"></i>
+                        Подтвердите пароль *
+                    </label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required 
+                           placeholder="Подтвердите пароль">
+                </div>
+                
+                <div class="password-requirements">
+                    <h4>Требования к паролю:</h4>
+                    <ul>
+                        <li>Минимум 8 символов</li>
+                        <li>Рекомендуется использовать буквы, цифры и специальные символы</li>
+                    </ul>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-user-plus"></i>
+                    Зарегистрироваться
+                </button>
+            </form>
+            
+            <div class="auth-footer">
+                <p>Уже есть аккаунт? <a href="/login" class="auth-link">Войти</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
